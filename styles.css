@@ -1,0 +1,187 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Warna latar belakang halaman */
+}
+
+header {
+    background: #ffffff; /* Warna latar belakang navbar */
+    color: #003366; /* Warna teks navbar */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 18px;
+    font-weight: bold; /* Menebalkan logo */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #003366; /* Warna teks link */
+    text-decoration: none;
+    font-weight: 500; /* Ketebalan font */
+    font-size: 13px;
+    transition: color 0.3s, background-color 0.3s; /* Efek transisi saat hover */
+    padding: 8px 12px; /* Padding untuk area klik yang lebih besar border-radius: 4px; /* Sudut melengkung untuk link */
+}
+
+nav ul li a:hover {
+    color: #01046c;
+    font-weight: bold   ;
+}
+
+.hero {
+    background-image: url(./img/Hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    padding: 100px 20px; /* Padding untuk hero section */
+    text-align: center; /* Teks terpusat */
+    display: flex;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 600px; /* Lebar maksimum konten */
+    margin: 0 auto; /* Pusatkan konten */
+    position: relative;
+    z-index: 2;
+}
+.about {
+    padding: 20px;
+    background-color: #f0f0f0; /* Warna latar belakang */
+    text-align: center; /* Teks terpusat */
+}
+
+.about-content {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    align-items: center; /* Vertikal center */
+    justify-content: flex-start; /* Horizontal center */
+    gap: 20px; /* Jarak antara foto dan teks */
+}
+.about-text{
+    text-align: left;
+}
+
+.about-photo {
+    max-width: 200px; /* Ukuran maksimum foto */
+    border-radius: 8px; /* Sudut melengkung */
+    border: 4px solid #003366;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button {
+    background: #00014a; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    padding: 10px 20px; /* Ukuran padding tombol */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    border-radius: 25px; /* Sudut melengkung */
+    font-size: 16px; /* Ukuran font tombol */
+    transition: background 0.3s; /* Efek transisi saat hover */
+    display: inline-block; /* Memastikan tombol tidak mengisi seluruh lebar */
+    margin-top: 20px; /* Jarak atas untuk tombol */
+}
+
+.car-list {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    justify-content: flex-start;
+}
+
+.car-grid {
+    display: flex; /* Menggunakan flexbox untuk tata letak horizontal */
+    flex-wrap: wrap; /* Membungkus card ke baris berikutnya jika tidak muat */
+    gap: 20px; /* Jarak antara card */
+    justify-content: center; /* Memusatkan card secara horizontal */
+}
+.car-section{
+    text-align: center;
+    padding: 20px;
+}
+.car-title{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.car-item {
+    background: white; /* Warna latar belakang item mobil */
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
+    padding: 15px; /* Padding untuk item mobil */
+    text-align: center; /* Teks terpusat */
+    transition: transform 0.3s, box-shadow 0.3s; /* Efek transisi saat hover */
+    margin: 0 10px;
+    flex: 0 0 auto; /* Mengatur ukuran card agar responsif */
+    max-width: 300px; /* Lebar maksimum card */
+}
+
+.car-item:hover {
+    transform: translateY(-5px); /* Mengangkat card saat hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Bayangan lebih dalam saat hover */
+}
+
+.car-item img {
+    max-width: 100%; /* Memastikan gambar tidak melampaui lebar item */
+    border-radius: 8px; /* Sudut melengkung untuk gambar */
+    transition: transform 0.3s; /* Efek transisi saat hover */
+    height: auto;
+}
+
+.car-item img:hover {
+    transform: scale(1.05); /* Memperbesar gambar saat hover */
+}
+
+.cta-button {
+    background: #00014a; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    padding: 10px 20px; /* Ukuran padding tombol */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    border-radius: 25px; /* Sudut melengkung */
+    font-size: 16px; /* Ukuran font tombol */
+    transition: background 0.3s, transform 0.3s; /* Efek transisi saat hover */
+    display: inline-block; /* Memastikan tombol tidak mengisi seluruh lebar */
+    margin-top: 10px; /* Jarak atas untuk tombol */
+}
+
+.cta-button:hover {
+    background: #0953f4; /* Warna tombol saat hover */
+    transform: scale(1.05); /* Memperbesar tombol saat hover */
+}
+
+
+footer {
+    text-align: center; /* Teks terpusat di footer */
+    padding: 20px; /* Padding untuk footer */
+    background: #003366; /* Warna latar belakang footer */
+    color: white; /* Warna teks footer */
+}
